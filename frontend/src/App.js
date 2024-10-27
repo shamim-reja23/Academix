@@ -5,9 +5,6 @@ import StudentHome from './Student/StudentHome';
 import MentorHome from './Mentor/MentorHome';
 import AdminHome from './Admin/AdminHome';
 
-// import LeaderBoardPage from './LeaderboardPage/LeaderboardPage';
-// import SubmissionPage from './SubmissionPage/SubmissionPage';
-
 import StudentDashboard from './Student/Pages/StudentDashboard';
 import ProjectDetails from './Student/Pages/ProjectDetails';
 import ChallengeDetails from './Student/Pages/ChallengeDetails';
@@ -19,13 +16,13 @@ import ProjectDetailMentor from './Mentor/Pages/ProjectDetailMentor';
 import ChallengeDetailMentor from './Mentor/Pages/ChallengeDetailMentor';
 import MentorFeedback from './Mentor/Pages/MentorFeedback';
 import MentorProfileSettings from './Mentor/Pages/MentorProfileSettings';
+import MentorLearningPath from './Mentor/Pages/MentorLearningPath';
 
 import AdminDashboard from './Admin/Pages/AdminDashboard';
 import ManageUsers from './Admin/Pages/ManageUsers';
 import ManageChallenges from './Admin/Pages/ManageChallenges';
 import ManageProjects from './Admin/Pages/ManageProjects';
 import ReportsAnalytics from './Admin/Pages/ReportAnalytics';
-import Leaderboard from './Admin/Pages/Leaderboard'
 import AdminProfile from './Admin/Pages/AdminProfile';
 
 import LoginPage from './Auth/LoginPage';
@@ -60,8 +57,9 @@ const App = () => {
           <Route index element={<Navigate to="mentor-dashboard" />} />
 
           <Route path="mentor-dashboard" element={<MentorDashboard />} />
-          <Route path="projects" element={<ProjectDetailMentor />} /> {/* Removed project prop */}
-          <Route path="challenges" element={<ChallengeDetailMentor />} /> {/* Removed project prop */}
+          <Route path="projects" element={<ProjectDetailMentor />} /> 
+          <Route path="challenges" element={<ChallengeDetailMentor />} /> 
+          <Route path="mentor-learning" element={<MentorLearningPath />} />
           <Route path="mentor-feedback" element={<MentorFeedback/>} />
           <Route path="mentor-profile-settings" element={<MentorProfileSettings />} />
         </Route>
@@ -73,7 +71,6 @@ const App = () => {
           <Route path="manage-challenges" element={<ManageChallenges />} />
           <Route path="manage-projects" element={<ManageProjects />} />
           <Route path="reports-analytics" element={<ReportsAnalytics />} />
-          <Route path="leaderboard" element={<Leaderboard />} />
           <Route path="admin-profile" element={<AdminProfile />} />
         </Route>
 
